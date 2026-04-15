@@ -5,12 +5,12 @@ on:
     push:
         branches : ["main"]
     pull_request:
-        branches : ["Main"]
+        branches : ["main"]
 
 
 jobs :
     build:
-        runs-on: ubantu-latest
+        runs-on: ubuntu-latest
         
         steps:
             - name: checkout
@@ -25,5 +25,4 @@ jobs :
                 pip install -r requirments.txt
             
             - name : Run tests
-              run:
-                pytest
+              run: pytest
